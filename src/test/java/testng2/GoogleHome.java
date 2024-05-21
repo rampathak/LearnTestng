@@ -14,11 +14,12 @@ public class GoogleHome {
 	public static WebDriver driver;
 	//launch the application
 	
-	public void launchApplication() {
+	public void launchApplication() throws InterruptedException {
 		System.setProperty("webdriver.chrome.driver", "resources/chromedriver.exe");
 		driver=new ChromeDriver();
 		driver.manage().window().maximize();
 		driver.get("https://google.com");
+		Thread.sleep(80);
 	}
 	
 	
